@@ -1,0 +1,17 @@
+.headline
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    font-size: 14px;
+    min-height: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+p
+{
+    margin: 0;
+}
