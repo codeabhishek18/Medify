@@ -1,5 +1,6 @@
 import styles from './Herosection.module.css'
 import heroimage from '../../assets/heroimage.png' 
+import SearchBox from '../searchbox/SearchBox';
 
 const Herosection = () =>
 {
@@ -19,6 +20,7 @@ const Herosection = () =>
                 </div>
             </div>
             <div className={styles.searchbox}>
+                <SearchBox/>
             </div>
         </div>
     )
