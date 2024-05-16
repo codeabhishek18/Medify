@@ -7,6 +7,8 @@ import { CarouselData } from '../../data/CarouselData';
 import Specialisation from '../../components/specialisation/Specialisation';
 import Footer from '../../components/footer/Footer';
 import PatientCare from '../../components/patientcare/PatientCare';
+import News from '../../components/news/News';
+import Stats from '../../components/starts/Stats';
 
 const Homepage = () =>
 {
@@ -18,6 +20,8 @@ const Homepage = () =>
             <Carousel data={CarouselData}/>
             <Specialisation/>
             <PatientCare/>
+            <News/>
+            <Stats/>
             <Footer/>
         </div>
     )

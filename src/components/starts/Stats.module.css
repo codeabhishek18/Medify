@@ -1,0 +1,41 @@
+.stats
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 9vw;
+    padding-right: 9vw;
+    background: linear-gradient(to top, var(--gradient-primary) 100%, var(--gradient-secondary) 47%);
+    padding-top:40px;
+    padding-bottom:40px;
+}
+
+.statscontent>span
+{
+    color: var(--primary-color);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.statscontent>h1
+{
+    color: var(--secondary-color);
+    font-size: 48px;
+    font-weight: 600;
+    margin: 15px;
+    margin-left: 0;
+}
+
+.statscontent>p
+{
+    color: #77829D;
+    line-height: 40px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.stats>img
+{
+    height: 715px;
+    width: 585px;
+}
