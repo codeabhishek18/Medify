@@ -1,10 +1,10 @@
 .herosection
 {
     display: flex;
-    background: linear-gradient(to right, var(--gradient-primary) 100%, var(--gradient-secondary) 47%);
+    background: linear-gradient(to top, var(--gradient-primary) 100%, var(--gradient-secondary) 47%);
     padding-left: 10vw;
     padding-right: 10vw;
-    padding-bottom: 40px;
+    padding-bottom: 200px;
 }
 
 .wrapper

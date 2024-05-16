@@ -1,0 +1,44 @@
+.footer
+{
+    padding: 12.5vw;
+    padding-top: 10vh;
+    padding-bottom: 0;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.upperfooter
+{
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(127, 122, 122);
+    padding-bottom: 40px;
+}
+
+.left
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.social
+{
+    display: flex;
+    column-gap: 10px;
+}
+
+.copyright
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
