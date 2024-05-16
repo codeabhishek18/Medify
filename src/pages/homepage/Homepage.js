@@ -6,6 +6,7 @@ import Carousel from '../../components/carousel/Carousel';
 import { CarouselData } from '../../data/CarouselData';
 import Specialisation from '../../components/specialisation/Specialisation';
 import Footer from '../../components/footer/Footer';
+import PatientCare from '../../components/patientcare/PatientCare';
 
 const Homepage = () =>
 {
@@ -16,6 +17,7 @@ const Homepage = () =>
             <Herosection/>
             <Carousel data={CarouselData}/>
             <Specialisation/>
+            <PatientCare/>
             <Footer/>
         </div>
     )

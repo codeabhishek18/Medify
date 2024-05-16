@@ -1,0 +1,70 @@
+.patientCare
+{
+    background: linear-gradient(to top, var(--gradient-primary) 100%, var(--gradient-secondary) 47%);
+    display: flex;
+    column-gap: 40px;
+    padding-left: 9vw;
+    padding-right:9vw;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.patientCare>img
+{
+    height: 500px;
+    width: 560px;
+}
+
+.carecontent
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carecontent>span
+{
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.carecontent>h1
+{
+    margin-top: 5px;
+    font-size: 48px;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.carecontent>h1>span
+{
+    color: var(--primary-color);
+}
+
+.carecontent>p
+{
+    font-size: 17px;
+    font-weight: 500;
+    color: #77829D;
+    line-height: 29px;
+    margin-bottom: 40px;
+}
+
+.carecontentlower
+{
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;    
+    row-gap: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.carecontentlower>p
+{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
