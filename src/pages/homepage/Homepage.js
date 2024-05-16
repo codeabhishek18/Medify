@@ -9,6 +9,7 @@ import Footer from '../../components/footer/Footer';
 import PatientCare from '../../components/patientcare/PatientCare';
 import News from '../../components/news/News';
 import Stats from '../../components/starts/Stats';
+import Faq from '../../components/faq/Faq';
 
 const Homepage = () =>
 {
@@ -22,6 +23,7 @@ const Homepage = () =>
             <PatientCare/>
             <News/>
             <Stats/>
+            <Faq/>
             <Footer/>
         </div>
     )

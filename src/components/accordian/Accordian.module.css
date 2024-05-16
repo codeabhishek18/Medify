@@ -1,0 +1,39 @@
+.accordian
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.drop
+{
+    width: 400px;
+}
+
+.question
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 0;
+    color: var(--secondary-color);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.ans
+{
+    width: 100%;
+    padding: 20px;
+    padding-right: 0;
+    background-color: var(--primary-color);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: white;
+}
+
+.question>p:last-child
+{
+    cursor: pointer;
+}
