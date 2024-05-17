@@ -1,26 +1,32 @@
 export const Navitems = [
     {
         id: 1,
-        item: 'Find Doctors'
+        route: 'Find Doctors',
+        to:'/doctors'
     },
     {
         id: 2,
-        item: 'Hospitals'
+        route: 'Hospitals',
+        to:'/'
     },
     {
         id: 3,
-        item: 'Medicines'
+        route: 'Medicines',
+        to:'/'
     },
     {
         id: 4,
-        item: 'Surgeries'
+        route: 'Surgeries',
+        to:'/'
     },
     {
         id: 5,
-        item: 'Software for Provider'
+        route: 'Software for Provider',
+        to:'/'
     },
     {
         id: 6,
-        item: 'Facilities'
+        route: 'Facilities',
+        to:'/'
     },
 ]

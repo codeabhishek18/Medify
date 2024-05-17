@@ -14,9 +14,7 @@ import Faq from '../../components/faq/Faq';
 const Homepage = () =>
 {
     return(
-        <div className={styles.homepage}>
-            <Headline/>
-            <Navbar/>
+        <div className={styles.homepage}>  
             <Herosection/>
             <Carousel data={CarouselData}/>
             <Specialisation/>
@@ -24,7 +22,6 @@ const Homepage = () =>
             <News/>
             <Stats/>
             <Faq/>
-            <Footer/>
         </div>
     )
 }

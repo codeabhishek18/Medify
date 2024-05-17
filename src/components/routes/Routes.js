@@ -1,5 +1,6 @@
 import { Navitems } from '../../data/Navitems.jsx';
 import styles from './Routes.module.css';
+import { Link } from "react-router-dom";
 
 const Routes = () =>
 {
@@ -8,10 +9,16 @@ const Routes = () =>
             <ul>
                 {Navitems?.map((data) =>
                 (
-                    <li key={data.id}>{data.item}</li>
+                    <li key={data.id}>
+                        <Link to={data.to} style={{textDecoration:'none', color:'var(--secondary-color)'}}>{data.route}</Link>
+                    </li>
                 ))}
             </ul>
-            <span className={styles.bookings}>My Bookings</span>
+            <span className={styles.bookings}>
+                <Link to='/mybookings' style={{textDecoration:'none', color:'white'}}>
+                    My Bookings
+                </Link>
+            </span>
         </div>
     )
 }

@@ -1,4 +1,3 @@
-import Headline from '../../components/headline/Headline';
 import styles from './FindDoc.module.css'
 
 const FindDoc = () =>
@@ -6,7 +5,7 @@ const FindDoc = () =>
 
     return(
         <div className={styles.finddoc}>
-            <Headline/>
+            <h1>Found Doc</h1>
         </div>
     )
 }

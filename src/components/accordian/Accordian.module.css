@@ -24,13 +24,15 @@
 
 .ans
 {
-    width: 100%;
+    width: 90%;
     padding: 20px;
-    padding-right: 0;
     background-color: var(--primary-color);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     color: white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
 }
 
 .question>p:last-child
