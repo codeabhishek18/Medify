@@ -28,9 +28,9 @@ const MedCentres = ({location}) =>
                     <h3>{hospitalData?.length} Medical centres available in {location.state}</h3>
                     <p><img src={whitetick} alt="verified"/>Book appointments with minimum wait-time & verified doctor details</p>
                 </div>
-                {hospitalData.map((data)=>
+                {hospitalData.map((data, index)=>
                 (
-                    <HospitalCards data={data} key={data["Provider ID"]}/>
+                    <HospitalCards data={data} index={index} key={data["Provider ID"]}/>
                 ))}
             </div> : ''}
         </div>
