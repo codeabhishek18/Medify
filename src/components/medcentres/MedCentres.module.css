@@ -1,0 +1,20 @@
+.medcontainer
+{
+    background: linear-gradient(to top, var(--gradient-primary) 100%, var(--gradient-secondary) 47%);
+    padding: 8vw;   
+    min-height: 10vh;
+}
+
+.wrapper>div>p
+{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.wrapper>div>p>img
+{
+    height: 20px;
+    width: 20px;
+}
+

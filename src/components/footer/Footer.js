@@ -28,21 +28,21 @@ const Footer = () =>
                     </div>
                 </div>
                 <div className={styles.right}>
-                    {fistColumndata.map((data)=>
+                    {fistColumndata.map((data, index)=>
                     (
-                        <span><img src={arrow} alt="arrow"/> {data.name}</span>
+                        <span key={index}><img src={arrow} alt="arrow"/> {data.name}</span>
                     ))}
                 </div>
                 <div className={styles.right}>
-                    {secondColumndata.map((data)=>
+                    {secondColumndata.map((data, index)=>
                     (
-                        <span><img src={arrow} alt="arrow"/> {data.name}</span>
+                        <span key={index}><img src={arrow} alt="arrow"/> {data.name}</span>
                     ))}
                 </div>
                 <div className={styles.right}>
-                    {thirdColumndata.map((data)=>
+                    {thirdColumndata.map((data, index)=>
                     (
-                        <span><img src={arrow} alt="arrow"/> {data.name}</span>
+                        <span key={index}><img src={arrow} alt="arrow"/> {data.name}</span>
                     ))}
                 </div>
             </div>
