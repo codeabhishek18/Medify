@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSwiper } from "swiper/react";
 import { useState } from "react";
 import { ReactComponent as RightArrow } from '../../assets/rightarrow.svg'
-import bookingcarousel from '../bookingcarousel/BookingCarousel.module.css'
+import navstyles from './Navigation.module.css'
 
 const RightNavigation = () => 
 {
@@ -18,7 +18,7 @@ const RightNavigation = () =>
 
   return (
     <div>
-      {!isEnd && <RightArrow className={`${bookingcarousel.navigation} ${bookingcarousel.right}`} onClick={() => swiper.slideNext()}/>}
+      {!isEnd && <RightArrow className={`${navstyles.navigation} ${navstyles.right}`} onClick={() => swiper.slideNext()}/>}
     </div>
   );
 };

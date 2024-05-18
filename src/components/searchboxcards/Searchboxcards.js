@@ -11,7 +11,10 @@ const Searchboxcards = ({data}) =>
             <div className="category">
                 {data.map((item)=>
                 (
-                    <div className={item.id === active ? "card active" : "card"} key={item.id} onClick={()=>setActive(item.id)}>
+                    <div 
+                        className={item.id === active ? "card active" : "card"} 
+                        key={item.id} 
+                        onClick={()=>setActive(item.id)}>
                         <img src={item.image} alt="icon"/>
                         <p>{item.label}</p>
                     </div>

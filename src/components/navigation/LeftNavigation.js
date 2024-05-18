@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSwiper } from "swiper/react";
 import { useState } from "react";
 import { ReactComponent as LeftArrow } from '../../assets/leftarrow.svg'
-import bookingcarousel from '../bookingcarousel/BookingCarousel.module.css'
+import navstyles from './Navigation.module.css'
 
 const LeftNavigation = () => 
 {
@@ -18,7 +18,7 @@ const LeftNavigation = () =>
 
   return (
     <div>
-      {!isBegin && <LeftArrow className={`${bookingcarousel.navigation} ${bookingcarousel.left}`} onClick={() => swiper.slidePrev()} />}
+      {!isBegin && <LeftArrow className={`${navstyles.navigation} ${navstyles.left}`} onClick={() => swiper.slidePrev()} />}
     </div>
   );
 };

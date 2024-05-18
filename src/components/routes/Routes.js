@@ -10,12 +10,16 @@ const Routes = () =>
                 {Navitems?.map((data) =>
                 (
                     <li key={data.id}>
-                        <Link to={data.to} style={{textDecoration:'none', color:'var(--secondary-color)'}}>{data.route}</Link>
+                        <Link to={data.to} 
+                            style={{textDecoration:'none', color:'var(--secondary-color)'}}>
+                            {data.route}
+                        </Link>
                     </li>
                 ))}
             </ul>
             <span className={styles.bookings}>
-                <Link to='/mybookings' style={{textDecoration:'none', color:'white'}}>
+                <Link to='/mybookings' 
+                    style={{textDecoration:'none', color:'white'}}>
                     My Bookings
                 </Link>
             </span>

@@ -7,8 +7,16 @@ const HospitalCards = ({data, setCurrent, current, index}) =>
 
     return(
         <div className={HospitalCardsStyles.main}>
-            <HospitalDetail data={data} index={index} setCurrent={setCurrent}/>
-            {current === index && <SlotBooking data={data} bookingIndex={index}/>}
+            <HospitalDetail 
+                data={data} 
+                index={index} 
+                setCurrent={setCurrent}
+            />
+            {current === index && 
+            <SlotBooking 
+                data={data} 
+                bookingIndex={index}
+            />}
         </div>
     )
 }

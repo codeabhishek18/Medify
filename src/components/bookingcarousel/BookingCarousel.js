@@ -22,12 +22,19 @@ const BookingCarousel = ({dates, bookingIndex}) =>
                 spaceBetween={30}>
                 <LeftNavigation />
                 <RightNavigation />
-                {dates?.map((data)=>
-                (
-                    <SwiperSlide key={data.id}>
-                        <SlotCard data={data} active={active} setActive={setActive} bookingIndex={bookingIndex}/>
-                    </SwiperSlide>
-                ))}  
+                <div className={bookingcarousel.swiperdiv}>
+                    {dates?.map((data)=>
+                    (
+                        <SwiperSlide key={data.id}>
+                            <SlotCard 
+                                data={data} 
+                                active={active} 
+                                setActive={setActive} 
+                                bookingIndex={bookingIndex}
+                            />
+                        </SwiperSlide>
+                    ))}
+                </div>  
             </Swiper>
         </div>
     )

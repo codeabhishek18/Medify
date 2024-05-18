@@ -3,22 +3,7 @@
     margin-bottom: 20px;
 }
 
-.navigation
+.swiperdiv
 {
-    position: absolute;
-    top: 0;
-    height: 48px;
-    aspect-ratio: 1/1;
-    z-index: 100;
-    cursor: pointer;
-}
-
-.left
-{
-    left:0;
-}
-
-.right
-{
-    right:0;
+    width: 80%;
 }

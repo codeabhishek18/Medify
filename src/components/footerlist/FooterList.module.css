@@ -1,7 +1,6 @@
-.accordian
+.right
 {
     display: flex;
     flex-direction: column;
-    row-gap: 40px;
+    row-gap: 10px;
 }
-

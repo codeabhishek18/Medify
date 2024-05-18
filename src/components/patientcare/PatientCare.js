@@ -11,8 +11,9 @@ const PatientCare = () =>
             <div className={styles.carecontent}>
                 <span>HELPING PATIENTS FROM AROUND THE GLOBE!!</span>
                 <h1>Patient <span>Caring</span></h1>
-                <p>Our goal is to deliver quality of care in a courteous, respectful, and compassionate manner. 
-                   We hope you will allow us to care for you and strive to be the first and best choice for healthcare.</p>
+                <p>Our goal is to deliver quality of care in a courteous, respectful, 
+                   and compassionate manner. We hope you will allow us to care for you 
+                   and strive to be the first and best choice for healthcare.</p>
                 <div className={styles.carecontentlower}>
                     <p><img src ={bluetick} alt="img"/>Stay Updated About Your Health</p>
                     <p><img src ={bluetick} alt="img"/>Check Your Results Online</p>

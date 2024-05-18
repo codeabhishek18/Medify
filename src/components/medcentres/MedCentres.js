@@ -31,7 +31,13 @@ const MedCentres = ({location}) =>
                 </div>
                 {hospitalData.map((data, index)=>
                 (
-                    <HospitalCards data={data} setCurrent={setCurrent} current={current} index={index} key={data["Provider ID"]}/>
+                    <HospitalCards 
+                        data={data} 
+                        setCurrent={setCurrent} 
+                        current={current} 
+                        index={index} 
+                        key={data["Provider ID"]}
+                    />
                 ))}
             </div> : ''}
         </div>

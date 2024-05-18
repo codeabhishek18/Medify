@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import HospitalDetail from "../../components/hospitaldetail/HospitalDetail";
 import mybookings from './MyBookings.module.css'
-import Searchbar from "../../components/searchbar/Searchbar";
 
 const MyBookings = () =>
 {

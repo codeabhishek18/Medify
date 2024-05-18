@@ -1,0 +1,34 @@
+.drop
+{
+    width: 400px;
+}
+
+.question
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 0;
+    color: var(--secondary-color);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.ans
+{
+    width: 90%;
+    padding: 20px;
+    background-color: var(--primary-color);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.question>p:last-child
+{
+    cursor: pointer;
+}

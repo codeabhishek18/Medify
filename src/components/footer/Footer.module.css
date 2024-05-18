@@ -24,13 +24,6 @@
     justify-content: space-between;
 }
 
-.right
-{
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-}
-
 .social
 {
     display: flex;

@@ -35,11 +35,8 @@ const HospitalDetail = ({data, index, setCurrent, type}) =>
             return enqueueSnackbar('Pick your slot', {variant: 'warning'});
 
         const newbooking = {id: bookingId(), name: bookinghospital.name, location: bookinghospital.location, date: bookingdate.date, time: bookingtime.time}
-
         const mybookings = bookings === null ? [newbooking] : [...bookings,newbooking];
-        console.log(mybookings)
         localStorage.setItem('MyBookings', JSON.stringify(mybookings));
-
         enqueueSnackbar('Booking confirmed', { variant : 'success'})
     }
 
@@ -55,7 +52,7 @@ const HospitalDetail = ({data, index, setCurrent, type}) =>
                 {type !== 'bookings' &&
                 <div className={hospitaldetail.contentBottom}>
                     <span>FREE</span>
-                    <p>500</p>
+                    <p className={hospitaldetail.fee}>₹500</p>
                     <p>Consultation fee at clinic</p>
                 </div>}
                 <img src={like} alt="like"/>
@@ -68,6 +65,7 @@ const HospitalDetail = ({data, index, setCurrent, type}) =>
             </div>
 
             :
+
             <div className={hospitaldetail.footer}>
                 <span>Available Today</span>
                 <button onClick={()=> handleClick()}>Book FREE Center Visit</button>

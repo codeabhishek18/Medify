@@ -23,7 +23,11 @@ const Specialisation = () =>
                 </div>
             ))}
             </div>
-            <button onClick={()=> setViewAll(!viewAll)} className={styles.viewButton}>{viewAll ? 'View Less' : 'View All'}</button>
+            <button 
+                onClick={()=> setViewAll(!viewAll)} 
+                className={styles.viewButton}>
+                {viewAll ? 'View Less' : 'View All'}
+            </button>
         </div>
     )           
 }

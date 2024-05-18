@@ -1,9 +1,12 @@
 import { MorningSlot, AfternoonSlot, EveningSlot, dates } from '../../data/SlotData'
 import BookingCarousel from '../bookingcarousel/BookingCarousel';
-import HospitalCardsStyles from '../hospitalcards/HospitalCards.module.css'
+import slotbookings from './SlotBooking.module.css'
+import Slots from '../slots/Slots';
+import { useState } from 'react';
 
 const SlotBooking = ({data, bookingIndex}) =>
 {
+    const [selectedSlot, setSelectedSlot]  = useState({type: '', index: -1});
 
     const handleClick = (slotTime) =>
     {
@@ -11,29 +14,12 @@ const SlotBooking = ({data, bookingIndex}) =>
     }
 
     return(
-       <div className={HospitalCardsStyles.slotbooking}>
+       <div className={slotbookings.slotbooking}>
             <BookingCarousel data={data} dates={dates} bookingIndex={bookingIndex}/>
-            <div className={HospitalCardsStyles.slotContent}>
-                <div className={HospitalCardsStyles.slots}>
-                    <span>Morning</span>
-                    <span className={HospitalCardsStyles.time} onClick={()=> handleClick(MorningSlot.time)}>{MorningSlot.time}</span>
-                </div>
-                <p></p>
-                <div className={HospitalCardsStyles.slots}>
-                    <span>Afternoon</span>
-                    {AfternoonSlot.map((slot)=>
-                    (
-                        <span className={HospitalCardsStyles.time} onClick={()=>handleClick(slot.time)}>{slot.time}</span>
-                    ))}
-                </div>
-                <p></p>
-                <div className={HospitalCardsStyles.slots}>
-                    <span>Evening</span>
-                    {EveningSlot.map((slot)=>
-                    (
-                        <span className={HospitalCardsStyles.time} onClick={()=>handleClick(slot.time)}>{slot.time}</span>
-                    ))}
-                </div>
+            <div className={slotbookings.slotContent}>
+                <Slots slotdata={MorningSlot} handleClick={handleClick} type="Morning" selectedSlot={selectedSlot} setSelectedSlot={setSelectedSlot}/>
+                <Slots slotdata={AfternoonSlot} handleClick={handleClick} type="Afternoon" selectedSlot={selectedSlot} setSelectedSlot={setSelectedSlot}/>
+                <Slots slotdata={EveningSlot} handleClick={handleClick} type="Evening" selectedSlot={selectedSlot} setSelectedSlot={setSelectedSlot}/>
             </div>
         </div>
     )

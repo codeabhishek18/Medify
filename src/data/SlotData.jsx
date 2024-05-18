@@ -1,8 +1,9 @@
-const MorningSlot = 
+const MorningSlot = [
     {
         id: 1,
         time: '11:30 AM'
     }
+]
 
 const AfternoonSlot = [
     {
