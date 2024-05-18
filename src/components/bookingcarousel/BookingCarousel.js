@@ -2,13 +2,17 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import LeftNavigation from '../leftNavigation/LeftNavigation';
-import RightNavigation from '../rightNavigation/RightNavigation';
+import LeftNavigation from '../navigation/LeftNavigation'
+import RightNavigation from '../navigation/RightNavigation';
 import SlotCard from '../slotcard/SlotCard';
 import bookingcarousel from './BookingCarousel.module.css'
+import { useState } from 'react';
 
-const BookingCarousel = ({dates}) =>
+const BookingCarousel = ({dates, bookingIndex}) =>
 {
+
+    const [active, setActive] = useState(0);
+
     return(
         <div className={bookingcarousel.container}>
             <Swiper
@@ -21,7 +25,7 @@ const BookingCarousel = ({dates}) =>
                 {dates?.map((data)=>
                 (
                     <SwiperSlide key={data.id}>
-                        <SlotCard data={data}/>
+                        <SlotCard data={data} active={active} setActive={setActive} bookingIndex={bookingIndex}/>
                     </SwiperSlide>
                 ))}  
             </Swiper>

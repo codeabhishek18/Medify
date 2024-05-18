@@ -1,20 +1,20 @@
-import { useState } from 'react'
-import slotcard from './SlotCard.module.css'
+import './SlotCard.css'
 
-const SlotCard = ({data}) =>
+const SlotCard = ({data, active, setActive, bookingIndex}) =>
 {
+    const handleClick = () =>
+    {
+        setActive(data.id)
+        localStorage.setItem('Date', JSON.stringify({id:bookingIndex, date: data.date}))
+    }
 
-    const [booking, setBooking] = useState();
-
-    console.log(booking);
-
-    console.log()
-
-    return(
-        <div className={slotcard.container} onClick={()=>{setBooking({date: data.date})}}> 
-            <p>{data.date}</p>
-            <span>{data.slots}</span>
-            <p></p>
+       return(
+        <div className="container">
+            <div onClick={handleClick}> 
+                <p>{data.date}</p>
+                <span>{data.slots}</span>
+            </div>
+            <p className={active === data.id ? "underline active" : "underline"}></p>
         </div>
     )
 }

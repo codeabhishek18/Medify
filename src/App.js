@@ -6,15 +6,20 @@ import {BrowserRouter as Router, Routes, Route, Outlet} from 'react-router-dom'
 import FindDoc from './pages/finddoc/FIndDoc';
 import Footer from './components/footer/Footer';
 import MyBookings from './pages/bookings/MyBookings';
+import Faq from './components/faq/Faq';
+import { SnackbarProvider } from 'notistack'
 
 function Medify()
 {
   return(
     <div>
-      <Headline/>
-      <Navbar/>
-      <Outlet/>
-      <Footer/>
+      <SnackbarProvider anchorOrigin={{ horizontal: 'center', vertical: 'top' }}>
+        <Headline/>
+        <Navbar/>
+        <Outlet/>
+        <Faq/>
+        <Footer/>
+      </SnackbarProvider>
     </div>
   )
 }

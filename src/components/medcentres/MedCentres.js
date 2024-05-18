@@ -7,6 +7,7 @@ import whitetick from '../../assets/whitetick.png'
 const MedCentres = ({location}) =>
 {
     const [hospitalData, setHospitalData] = useState([]);
+    const [current, setCurrent] = useState(-1);
     
     const getHospitalData = async () =>
     {
@@ -30,7 +31,7 @@ const MedCentres = ({location}) =>
                 </div>
                 {hospitalData.map((data, index)=>
                 (
-                    <HospitalCards data={data} index={index} key={data["Provider ID"]}/>
+                    <HospitalCards data={data} setCurrent={setCurrent} current={current} index={index} key={data["Provider ID"]}/>
                 ))}
             </div> : ''}
         </div>

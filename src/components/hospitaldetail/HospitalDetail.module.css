@@ -1,17 +1,13 @@
-.main
-{
-    padding: 30px;
-    margin-top: 20px;
-    background-color: white;
-    border-radius: 8px;
-    width: 700px;
-}
-
 .container
 {
     display: flex;
     justify-content: space-between;
     column-gap: 30px;
+    padding: 30px;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+    width: 700px;
 }
 
 .container>img
@@ -93,61 +89,31 @@
     cursor: pointer;
 }
 
-.slots
+.footerslots 
 {
-    margin-left: 10px;
     display: flex;
-    align-items: center;
-    column-gap: 10px;
+    column-gap: 20px;
+    margin-top: 25px;
+}
+
+.footerslots span
+{
+    padding: 8px;
     font-size: 14px;
-}
-
-.slots>span
-{
-    width: 100px;
-}
-
-.time
-{
-    width: 80px;
-    height: 40px;
+    height: 18px;
     display: flex;
-    justify-content:center;
     align-items: center;
-    color: var(--primary-color);
+}
+
+.footerslots>span:first-child
+{
     border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    cursor: pointer;
+    color: var(--primary-color);
 }
 
-.slotContent
+.footerslots>span:last-child
 {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-
-}
-
-.slotbooking
-{
-    margin-top: 30px;
-    width: auto;
-    position: relative;
-}
-
-.slotbooking p
-{
-    height: 1px;
-    background-color: #F0F0F5;
-    width: 100%;
-}
-
-.block
-{
-    display: block;
-}
-
-.none
-{
-    display: none;
+    border: 1px solid #01A400;
+    color: #01A400;
+    font-weight: 700;
 }

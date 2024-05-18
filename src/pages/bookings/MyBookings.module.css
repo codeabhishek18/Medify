@@ -1,0 +1,6 @@
+.container
+{
+    background: linear-gradient(to top, var(--gradient-primary) 100%, var(--gradient-secondary) 47%);
+    padding: 9vw;
+    padding-top: 40px;
+}

@@ -1,4 +1,4 @@
-.container
+.container>div
 {
     display: flex;
     flex-direction: column;
@@ -11,24 +11,30 @@
     cursor: pointer;
 }
 
-.container>p:first-child
+.container>div>p:first-child
 {
     font-weight: 500;
     font-size: 14px;
 }
 
-.container>span
+.container>div>span
 {
     color: #01A400;
     font-size: 12px;
 }
 
-.container>p:last-child
+.underline
 {
     width: 50%;
     margin-top: 0;
     height: 3px;
     border-radius: 8px;
+    background-color: #F0F0F5;
+}
+
+.active
+{
     background-color: var(--primary-color);
 }
+
 
