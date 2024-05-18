@@ -47,6 +47,19 @@ const EveningSlot = [
     },
 ]
 
+const today = new Date();
+const date = today.toLocaleDateString();
+
+const dateFormat = (inputDate, num) =>
+{
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    const dd = Number(inputDate.slice(0,2)) +num;
+    const mm = inputDate.slice(3,5);
+    const yyyy = inputDate.substr(6,10);
+    const month = months[Number(mm) - 1];
+    return month +' ' +dd +', ' +yyyy;
+}
+
 const dates = [
     {
         id: 1,
@@ -60,28 +73,28 @@ const dates = [
     },
     {
         id: 3,
-        date: 'Fri, 5 May',
-        slots: '12 slots available'
+        date: dateFormat(date, 2),
+        slots: '9 slots available'
     },
     {
         id: 4,
-        date: 'Sat, 6 May',
-        slots: '19 slots available'
+        date: dateFormat(date, 3),
+        slots: '12 slots available'
     },
     {
         id: 5,
-        date: 'Sun, 7 May',
-        slots: '16 slots available'
+        date: dateFormat(date, 4),
+        slots: '12 slots available'
     },
     {
         id: 6,
-        date: 'Mon, 8 May',
-        slots: '19 slots available'
+        date: dateFormat(date, 5),
+        slots: '14 slots available'
     },
     {
         id: 7,
-        date: 'Tue, 9 May',
-        slots: '20 slots available'
+        date: dateFormat(date, 6),
+        slots: '15 slots available'
     },
 ]
 

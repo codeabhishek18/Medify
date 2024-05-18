@@ -1,8 +1,6 @@
 .container
 {
     display: flex;
-    justify-content: space-between;
-    column-gap: 30px;
     padding: 30px;
     margin-top: 20px;
     background-color: white;
@@ -14,11 +12,22 @@
 {
     width: 124px;
     height: 124px;
+    margin-right: 20px;
+}
+
+.wrapper
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
 }
 
 .content
 {
-    font-size: 14px;
+    font-size: 10px;
+    width: 60%;
+    margin-right: 10px;
 }
 
 .content>h4
@@ -54,6 +63,7 @@
     align-items: center;
     font-size: 14px;
     column-gap: 20px;
+    margin-bottom: 8px;
 }
 
 .contentBottom>span
@@ -67,6 +77,14 @@
     text-decoration: line-through;
 }
 
+.dotted
+{
+    width: 100;
+    height: 1px;
+    border-bottom: 2px dotted #E8E8F0;
+    margin-bottom: 8px;
+}
+
 .footer
 {
     display: flex;
@@ -75,7 +93,7 @@
     align-items: center;
     font-size: 14px;
     font-weight: 500;
-    margin-top: 120px;
+    margin-top: 110px;
 }
 
 .footer>span
@@ -96,17 +114,21 @@
 
 .footerslots 
 {
+    width: 40%;
     display: flex;
     column-gap: 20px;
     margin-top: 25px;
 }
 
-.footerslots span
+.footerslots>span
 {
-    padding: 8px;
+    width: 90px;
     font-size: 14px;
-    height: 18px;
+    height: 30px;
+    padding-left: 2px;
+    padding-right: 2px;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 

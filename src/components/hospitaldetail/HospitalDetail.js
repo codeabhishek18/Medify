@@ -45,32 +45,38 @@ const HospitalDetail = ({data, index, setCurrent, type}) =>
 
             <img src={medcentre} alt="hospital"/>
             
-            <div className={hospitaldetail.content}>
-                <h4>{type === 'bookings' ? data.name : data["Hospital Name"]}</h4>
-                <h6>{type === 'bookings' ? data.location : `${data.City}, ${data.State}`}</h6>
-                <p>Smilessence Center for Advanced Dentistry + 1</p>
-                {type !== 'bookings' &&
-                <div className={hospitaldetail.contentBottom}>
-                    <span>FREE</span>
-                    <p className={hospitaldetail.fee}>₹500</p>
-                    <p>Consultation fee at clinic</p>
-                </div>}
-                <img src={like} alt="like"/>
-            </div>
+            <div className={hospitaldetail.wrapper}>
+            <   div className={hospitaldetail.content}>
+                    <h4>{type === 'bookings' ? data.name : data["Hospital Name"]}</h4>
+                    <h6>{type === 'bookings' ? data.location : `${data.City}, ${data.State}`}</h6>
+                    <p>Smilessence Center for Advanced Dentistry + 1</p>
+
+                    {type !== 'bookings' &&
+                    <div className={hospitaldetail.contentBottom}>
+                        <span>FREE</span>
+                        <p className={hospitaldetail.fee}>₹500</p>
+                        <p>Consultation fee at clinic</p>
+                    </div>}
+                    
+                    <p className={hospitaldetail.dotted}></p>
+                    <img src={like} alt="like"/>
+                </div>
             
-            {type === 'bookings' ?
-            <div className={hospitaldetail.footerslots}>
-                <span>{data.time}</span>
-                <span>{data.date}</span>
-            </div>
+                {type === 'bookings' ?
+                <div className={hospitaldetail.footerslots}>
+                    <span>{data.time}</span>
+                    <span>{data.date}</span>
+                </div>
 
-            :
+                :
 
-            <div className={hospitaldetail.footer}>
-                <span>Available Today</span>
-                <button onClick={()=> handleClick()}>Book FREE Center Visit</button>
-            </div>
+                <div className={hospitaldetail.footer}>
+                    <span>Available Today</span>
+                    <button onClick={()=> handleClick()}>Book FREE Center Visit</button>
+                </div>
 }
+            </div>
+
         </div>
     )
 }

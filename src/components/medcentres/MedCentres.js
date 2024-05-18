@@ -3,6 +3,7 @@ import HospitalCards from '../hospitalcards/HospitalCards'
 import styles from './MedCentres.module.css'
 import axios from "axios"
 import whitetick from '../../assets/whitetick.png'
+import { enqueueSnackbar } from 'notistack'
 
 const MedCentres = ({location}) =>
 {
@@ -11,9 +12,16 @@ const MedCentres = ({location}) =>
     
     const getHospitalData = async () =>
     {
-        const url = `https://meddata-backend.onrender.com/data?state=${location.state}&city=${location.city}`
-        const response = await axios.get(url);
-        setHospitalData(response.data)
+        try
+        {
+            const url = `https://meddata-backend.onrender.com/data?state=${location.state}&city=${location.city}`
+            const response = await axios.get(url);
+            setHospitalData(response.data)
+        }
+        catch(error)
+        {
+            enqueueSnackbar(error, {variant:'error'});
+        }
     }
 
     useEffect(() =>

@@ -23,7 +23,7 @@
     bottom: -50px;
 }
 
-.searchbar_input>input
+.searchbar_input>select
 {
     padding-left: 50px;
     padding-top: 5px;
