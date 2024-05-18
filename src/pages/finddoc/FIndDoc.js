@@ -9,7 +9,7 @@ const FindDoc = () =>
 
     return(
         <div className={styles.finddoc}>
-            <Searchbar setLocation={setLocation}/>
+            <Searchbar type="query" setLocation={setLocation}/>
             <MedCentres location={location}/>
         </div>
     )

@@ -1,6 +1,18 @@
 .container
 {
     background: linear-gradient(to top, var(--gradient-primary) 100%, var(--gradient-secondary) 47%);
+}
+
+.wrapper
+{
+    display: flex;
+    column-gap: 30px;
     padding: 9vw;
-    padding-top: 40px;
+}
+
+.wrapper>div:first-child
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
 }

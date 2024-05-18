@@ -18,3 +18,9 @@
     width: 20px;
 }
 
+.adwrapper
+{
+    display: flex;
+    justify-content: space-between;
+}
+

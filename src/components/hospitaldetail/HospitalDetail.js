@@ -2,6 +2,7 @@ import medcentre from '../../assets/medcentre.png'
 import hospitaldetail from './HospitalDetail.module.css'
 import like from '../../assets/like.png'
 import { enqueueSnackbar } from 'notistack'
+import { useEffect } from 'react'
 
 const bookingId = () =>
 {
@@ -17,6 +18,13 @@ const bookingId = () =>
 const HospitalDetail = ({data, index, setCurrent, type}) =>
 {
 
+    useEffect(()=>
+    {
+        localStorage.setItem('Hospital', JSON.stringify({id : -1, name : '', location : '' }));
+        localStorage.setItem('Date', JSON.stringify({id:-1, date:''}));
+        localStorage.setItem('Time', JSON.stringify({id:-1, time:''}) );
+    },[])
+
     const handleClick = () =>
     {
         setCurrent(index);
@@ -28,16 +36,21 @@ const HospitalDetail = ({data, index, setCurrent, type}) =>
         const bookings = JSON.parse(localStorage.getItem('MyBookings'));
         console.log(bookings);
 
-        if(bookinghospital.id !== bookingdate.id)
-            return enqueueSnackbar('Pick a date', {variant: 'warning'});
+        if(bookinghospital?.id !== bookingdate?.id)
+            return enqueueSnackbar('Please choose a date', {variant: 'warning'});
 
-        if(bookinghospital.id !== bookingtime.id)
-            return enqueueSnackbar('Pick your slot', {variant: 'warning'});
+        if(bookinghospital?.id !== bookingtime?.id)
+            return enqueueSnackbar('Please choose a slot', {variant: 'warning'});
 
         const newbooking = {id: bookingId(), name: bookinghospital.name, location: bookinghospital.location, date: bookingdate.date, time: bookingtime.time}
         const mybookings = bookings === null ? [newbooking] : [...bookings,newbooking];
         localStorage.setItem('MyBookings', JSON.stringify(mybookings));
-        enqueueSnackbar('Booking confirmed', { variant : 'success'})
+        enqueueSnackbar('Booking confirmed. Please check My Bookings for more information.', { variant : 'success'})
+
+        localStorage.setItem('Hospital', JSON.stringify({id : -1, name : '', location : '' }));
+        localStorage.setItem('Date', JSON.stringify({id:-1, date:''}));
+        localStorage.setItem('Time', JSON.stringify({id:-1, time:''}) );
+        setCurrent(-1);
     }
 
     return(
@@ -57,7 +70,7 @@ const HospitalDetail = ({data, index, setCurrent, type}) =>
                         <p className={hospitaldetail.fee}>₹500</p>
                         <p>Consultation fee at clinic</p>
                     </div>}
-                    
+
                     <p className={hospitaldetail.dotted}></p>
                     <img src={like} alt="like"/>
                 </div>

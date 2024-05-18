@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { enqueueSnackbar } from 'notistack'
 
-const Searchbar = ({setLocation}) =>
+const Searchbar = ({setLocation, type}) =>
 {
     const [address, setAddress] = useState({state: '', city: ''});
     const [statesList, setStateslist] = useState([]);
@@ -30,7 +30,7 @@ const Searchbar = ({setLocation}) =>
             const url = 'https://meddata-backend.onrender.com/states';
             const response = await axios.get(url);
             setStateslist(response.data);   
-            // localStorage.setItem('States', JSON.stringify(response.data))
+            localStorage.setItem('States', JSON.stringify(response.data))
         } 
         catch(error)
         {
@@ -42,8 +42,6 @@ const Searchbar = ({setLocation}) =>
     {
         try
         {
-            const states = JSON.parse(localStorage.getItem('States'));
-            setStateslist(states)
             const url = `https://meddata-backend.onrender.com/cities/${address.state}`
             const response = await axios.get(url);
             setCitiesList(response.data)
@@ -61,24 +59,24 @@ const Searchbar = ({setLocation}) =>
 
     useEffect(()=>
     {
+        setStateslist(JSON.parse(localStorage.getItem('States')));
         getCities();
     },[address.state])
 
+    const handleSearch = () =>
+    {
+
+    }
+
     return(
         <div className={styles.searchwrapper}>
+            {type == "bookings" && <h1 className={styles.bookingheader}>My Bookings</h1>}
+            {type !== "bookings" ?
             <form className={styles.searchbar} onSubmit={handleSubmit}>
 
                 <div className={styles.searchbar_input} style={{width:'30%'}}>
-                    {/* <input 
-                        placeholder='State' 
-                        name="state" 
-                        onChange={handleChange} 
-                        value={address.state} 
-                        required
-                    /> */}
-
                     <select name="state" onChange={handleChange}>
-                        <option value="" disabled>State</option>
+                        <option value="" >State</option>
                         {statesList?.map((state) =>
                         (
                             <option key={state} value={state}>{state}</option>
@@ -92,15 +90,8 @@ const Searchbar = ({setLocation}) =>
                 </div>
 
                 <div className={styles.searchbar_input} style={{width:'40%'}}>
-                    {/* <input 
-                        placeholder='City' 
-                        name="city" 
-                        onChange={handleChange} 
-                        value={address.city}
-                    /> */}
-
                     <select name="city" onChange={handleChange}>
-                        <option value="" disabled>City</option>
+                        <option value="" >City</option>
                         {citiesList?.map((city) =>
                         (
                             <option value={city}>{city}</option>
@@ -118,7 +109,23 @@ const Searchbar = ({setLocation}) =>
                     Search
                 </button>
 
-            </form>
+            </form> 
+            
+            :
+
+            <form className={styles.bookbar} onSubmit={handleSearch}>
+                <input 
+                    placeholder='Search By Hospital' 
+                    name="hospital" 
+                    onChange={handleChange} 
+                    value={address.city}
+                />
+
+                <button type='submit'>
+                    <img src={search} alt="search"/>
+                    Search
+                </button>
+            </form>}
         </div>
     )
 }
