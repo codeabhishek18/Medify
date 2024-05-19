@@ -11,7 +11,7 @@ const Searchboxcards = ({data}) =>
             <div className="category">
                 {data.map((item)=>
                 (
-                    <div 
+                    <div
                         className={item.id === active ? "card active" : "card"} 
                         key={item.id} 
                         onClick={()=>setActive(item.id)}>

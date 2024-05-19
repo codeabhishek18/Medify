@@ -7,6 +7,9 @@ import Ad from "../../components/ad/Ad";
 const MyBookings = () =>
 {
     const [myBookings, setMyBookings] = useState([])
+    const [searchHospital, setSearchHospital] = useState('');
+
+    const filteredHospitalData = myBookings.filter((bookings) => bookings.name.toLowerCase().includes(searchHospital.toLocaleLowerCase()));
 
     useEffect(()=>
     {
@@ -15,13 +18,13 @@ const MyBookings = () =>
 
     return(
         <div className={mybookings.container}>
-            <Searchbar type="bookings"/>
+            <Searchbar type="bookings" setSearchHospital={setSearchHospital}/>
             <div className={mybookings.wrapper}> 
                 <div>
-                {myBookings.map((data) =>
-                (
-                    <HospitalDetail data={data} type="bookings"/>
-                ))}
+                    {filteredHospitalData.map((data) =>
+                    (
+                        <HospitalDetail data={data} type="bookings"/>
+                    ))}
                 </div>
                 <Ad/>
             </div>

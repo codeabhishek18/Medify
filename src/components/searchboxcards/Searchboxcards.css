@@ -16,6 +16,7 @@
 
 .card
 {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,6 +29,7 @@
     font-size: 18px;
     cursor: pointer;
     padding: 10px;
+    row-gap: 10px;
 }
 
 .active
@@ -44,4 +46,9 @@
     font-weight: 500;
     margin-bottom: 20px;
     letter-spacing: 0.75px;
+}
+
+.card>p
+{
+    margin-top: 10px;
 }

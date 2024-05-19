@@ -5,11 +5,12 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { enqueueSnackbar } from 'notistack'
 
-const Searchbar = ({setLocation, type}) =>
+const Searchbar = ({setLocation, type, setSearchHospital}) =>
 {
     const [address, setAddress] = useState({state: '', city: ''});
     const [statesList, setStateslist] = useState([]);
     const [citiesList, setCitiesList] = useState([]);
+    const [hospitalName, setHospitalName] = useState('');
 
     const handleChange = (e) =>
     {
@@ -63,14 +64,15 @@ const Searchbar = ({setLocation, type}) =>
         getCities();
     },[address.state])
 
-    const handleSearch = () =>
-    {
-
-    }
+    const handleSearch = (e) =>
+    {   
+        e.preventDefault();
+        setSearchHospital(hospitalName);
+    }   
 
     return(
         <div className={styles.searchwrapper}>
-            {type == "bookings" && <h1 className={styles.bookingheader}>My Bookings</h1>}
+            {type === "bookings" && <h1 className={styles.bookingheader}>My Bookings</h1>}
             {type !== "bookings" ?
             <form className={styles.searchbar} onSubmit={handleSubmit}>
 
@@ -117,8 +119,9 @@ const Searchbar = ({setLocation, type}) =>
                 <input 
                     placeholder='Search By Hospital' 
                     name="hospital" 
-                    onChange={handleChange} 
-                    value={address.city}
+                    onChange={(e)=> setHospitalName(e.target.value)} 
+                    value={hospitalName}
+                    style={{paddingLeft:'20px'}}
                 />
 
                 <button type='submit'>

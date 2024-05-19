@@ -1,0 +1,20 @@
+.container
+{
+    margin-top: 80px;
+    padding: 5vw;
+}
+
+.carousel
+{
+    background-color: #ffffff;
+    padding: 40px 80px;
+    margin-top: 200px;
+    padding-right: 50px;
+}
+
+.slide
+{
+    width: 400px;
+    height: 200px;
+    border-radius: 8px;
+}
