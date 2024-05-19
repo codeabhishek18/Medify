@@ -33,25 +33,25 @@ const MedCentres = ({location}) =>
     return(
         <div className={styles.medcontainer}>
             <div className={styles.wrapper}>
-                {hospitalData.length ? <div>
+                <div className={styles.medheader}>
                     <h3>{hospitalData?.length} Medical centres available in {location.state}</h3>
                     <p><img src={whitetick} alt="verified"/>Book appointments with minimum wait-time & verified doctor details</p>
-                </div> : null}
-                <div className={styles.adwrapper}>
-                    <div>
-                        {hospitalData.map((data, index)=>
-                        (
-                        <HospitalCards 
-                            data={data} 
-                            setCurrent={setCurrent} 
-                            current={current} 
-                            index={index} 
-                            key={data["Provider ID"]}
-                        />
-                        ))}
-                    </div>
-                    <Ad/>
+                </div> 
+                <div className={styles.medcentres}>
+                {hospitalData.map((data, index)=>
+                (
+                    <HospitalCards 
+                        data={data} 
+                        setCurrent={setCurrent} 
+                        current={current} 
+                        index={index} 
+                        key={data["Provider ID"]}
+                    />
+                ))}
                 </div>
+            </div>
+            <div className={styles.adwrapper}>
+                <Ad/>
             </div>
         </div>
     )

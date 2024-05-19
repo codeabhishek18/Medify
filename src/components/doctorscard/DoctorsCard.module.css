@@ -1,0 +1,51 @@
+.container
+{
+    height: 380px;
+    width: 270px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.docimage
+{
+    height: 300px;
+    width: 100%;
+    background: linear-gradient(144.2deg, #E1F3FF 0%, #2AA7FF 100%);
+    border-top-left-radius: 250px;
+    border-top-right-radius: 250px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.docimage>img
+{
+    height: 270px;
+    width: 220px;
+    position: absolute;
+    bottom: 0;
+}
+
+.content
+{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+}
+
+.content>h3
+{
+    margin:0;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--secondary-color);
+}
+
+.content>span
+{
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 500;
+}

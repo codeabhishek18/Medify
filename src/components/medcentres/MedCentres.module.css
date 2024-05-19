@@ -3,25 +3,28 @@
     background: linear-gradient(to top, var(--gradient-primary) 100%, var(--gradient-secondary) 47%);
     padding: 8vw;   
     min-height: 10vh;
+    display: flex;
+    justify-content: space-between;
 }
 
-.wrapper>div>p
+.medheader>p:last-child
 {
     display: flex;
     align-items: center;
     column-gap: 15px;
 }
 
-.wrapper>div>p>img
+.medheader>p>img
 {
     height: 20px;
     width: 20px;
 }
 
-.adwrapper
+.medcentres
 {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    row-gap: 20px;
 }
 
 
