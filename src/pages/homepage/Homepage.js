@@ -6,6 +6,7 @@ import News from '../../components/news/News';
 import Stats from '../../components/stats/Stats';
 import OfferCarousel from '../../components/offercarousel/OfferCarousel';
 import DoctorsCarousel from '../../components/doctorscarousel/DoctorsCarousel';
+import Faq from '../../components/faq/Faq';
 
 const Homepage = () =>
 {
@@ -18,6 +19,7 @@ const Homepage = () =>
             <PatientCare/>
             <News/>
             <Stats/>
+            <Faq/>
         </div>
     )
 }

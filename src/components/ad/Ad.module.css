@@ -7,19 +7,23 @@
     padding: 20px;
     background-color: white;
     border-radius: 8px;
-    max-height: 300px;
+    height: 300px;
 }
 
 .container>h3
 {
-    margin: 0;
     font-weight: 400;
     font-size: 22px;
 }
 
 .container>h1
 {
+    margin-top: 20px;
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: left;
     color: var(--primary-color);
+    margin: 0;
 }
 
 .container>h1>span
@@ -29,6 +33,7 @@
 
 .container>span
 {
+    margin-top: 10px;
     background-color: var(--primary-color);
     border-radius: 8px;
     padding: 5px;

@@ -6,8 +6,8 @@ import {BrowserRouter as Router, Routes, Route, Outlet} from 'react-router-dom'
 import FindDoc from './pages/finddoc/FIndDoc';
 import Footer from './components/footer/Footer';
 import MyBookings from './pages/bookings/MyBookings';
-import Faq from './components/faq/Faq';
 import { SnackbarProvider } from 'notistack'
+import Contact from './components/contact/Contact';
 
 function Medify()
 {
@@ -17,7 +17,7 @@ function Medify()
         <Headline/>
         <Navbar/>
         <Outlet/>
-        <Faq/>
+        <Contact/>
         <Footer/>
       </SnackbarProvider>
     </div>
