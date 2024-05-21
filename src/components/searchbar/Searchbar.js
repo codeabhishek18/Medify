@@ -31,7 +31,6 @@ const Searchbar = ({setLocation, type, setSearchHospital}) =>
             const url = 'https://meddata-backend.onrender.com/states';
             const response = await axios.get(url);
             setStateslist(response.data);   
-            localStorage.setItem('States', JSON.stringify(response.data))
         } 
         catch(error)
         {
@@ -60,8 +59,9 @@ const Searchbar = ({setLocation, type, setSearchHospital}) =>
 
     useEffect(()=>
     {
-        setStateslist(JSON.parse(localStorage.getItem('States')));
         getCities();
+        setCitiesList([]);
+        setAddress({state:address.state, city:''});
     },[address.state])
 
     const handleSearch = (e) =>

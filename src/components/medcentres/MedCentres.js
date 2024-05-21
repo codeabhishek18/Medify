@@ -33,10 +33,10 @@ const MedCentres = ({location}) =>
     return(
         <div className={styles.medcontainer}>
             <div className={styles.wrapper}>
-                <div className={styles.medheader}>
+                {hospitalData.length>0 && <div className={styles.medheader}>
                     <h3>{hospitalData?.length} Medical centres available in {location.state}</h3>
                     <p><img src={whitetick} alt="verified"/>Book appointments with minimum wait-time & verified doctor details</p>
-                </div> 
+                </div>} 
                 <div className={styles.medcentres}>
                 {hospitalData.map((data, index)=>
                 (
