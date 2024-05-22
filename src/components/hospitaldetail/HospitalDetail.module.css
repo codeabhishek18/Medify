@@ -149,7 +149,15 @@
 {
     .container
     {
-        width: 100%;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:920px) 
+{
+    .container
+    {
+        width: 85%;
     }
 }
 
@@ -166,6 +174,7 @@
 {
     .container
     {
+        width: 80%;
         flex-direction: column;
         row-gap: 20px;
     }
@@ -184,5 +193,18 @@
         flex-direction: row;
         margin-bottom: 20px;
     }
+
+    .footer
+    {
+        transform: translateX(-7%);   
+        margin-bottom: 10px;
+    }
 }
 
+@media screen and (max-width:1180px) 
+{
+    .container
+    {
+        width: 70%;
+    }
+}

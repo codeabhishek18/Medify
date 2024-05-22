@@ -26,7 +26,7 @@ const MyBookings = () =>
                         <HospitalDetail data={data} type="bookings"/>
                     ))}
                 </div>
-                <Ad/>
+                {/* <Ad/> */}
             </div>
         </div>
     )

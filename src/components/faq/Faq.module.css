@@ -35,3 +35,13 @@
     width: 650px;
     height: 500px;
 }
+
+@media screen and (max-width:1180px)
+{
+    .faqwrapper
+    {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+}

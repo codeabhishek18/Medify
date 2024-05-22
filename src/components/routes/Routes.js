@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 const Routes = () =>
 {
     return(
-        <div className={styles.routes}>
+        <div className={`${styles.collapse} ${styles.routes}`}>
             <ul>
                 {Navitems?.map((data) =>
                 (
-                    <li key={data.id}>
+                    <li key={data.id} className={styles.collapse}>
                         <Link to={data.to} 
                             style={{textDecoration:'none', color:'var(--secondary-color)'}}>
                             {data.route}

@@ -29,7 +29,6 @@
     align-items: center;
     background-color: white;
     width: 50%;
-    height: 40%;
     border-radius: 15px;
     padding: 25px;
     display: flex;
@@ -103,3 +102,63 @@ input
     font-size: 40px;
 }
 
+@media screen and (max-width:620px) 
+{
+    .bookbar 
+    {
+        bottom:-50px;
+        width:80%;
+        left: 50%;
+        transform: translateX(-50%);
+        column-gap: 10px;
+    }
+
+    .bookbar>input
+    {
+        padding: 0;
+        height: 40px;
+    }
+
+    .bookingheader
+    {
+        top:0;
+        left: 20px;
+    }
+
+    .bookbar>button
+    {
+        height: 40px;
+        padding: 0;
+        width: 90px;
+        column-gap: 5px;
+    }
+
+    .searchwrapper
+    {
+        height: 140px;
+    }
+
+    .searchbar
+    {
+        top:60px;
+        width: 60%;
+        height: 120px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 30px;
+        row-gap: 10px;
+    }
+
+    .searchbar_input>select
+    {
+        width: 250px;
+    }
+
+    .searchbar>button
+    {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 250px;
+    }
+}

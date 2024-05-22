@@ -12,7 +12,7 @@ const FindDoc = () =>
         <div className={styles.finddoc}>
             <Searchbar type="querys" setLocation={setLocation}/>
             <MedCentres location={location}/>
-            <Faq/>
+            {/* <Faq/> */}
         </div>
     )
 }

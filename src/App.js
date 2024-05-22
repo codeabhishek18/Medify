@@ -17,8 +17,8 @@ function Medify()
         <Headline/>
         <Navbar/>
         <Outlet/>
-        <Contact/>
-        <Footer/>
+        {/* <Contact/> */}
+        {/* <Footer/> */}
       </SnackbarProvider>
     </div>
   )

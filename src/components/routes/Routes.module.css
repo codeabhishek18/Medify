@@ -35,3 +35,17 @@ li:hover
 {
     transform: scale(1.1);
 }
+
+
+@media screen and (max-width:1180px) 
+{
+    .collapse
+    {
+        flex-direction: column;
+    }
+
+    ul
+    {
+        flex-direction: column;
+    }
+}
