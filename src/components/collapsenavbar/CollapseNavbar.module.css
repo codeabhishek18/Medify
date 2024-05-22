@@ -8,6 +8,7 @@
     position: absolute;
     background-color: white;
     position: fixed;
+    background-color: var(--gradient-primary);
 }
 
 @media screen and (min-width:840px)

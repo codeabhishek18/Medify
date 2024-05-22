@@ -16,5 +16,6 @@ h1
 .wrapper
 {
     display: flex;
+    justify-content: center;
     height: 440px;
 }

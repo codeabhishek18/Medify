@@ -13,8 +13,8 @@ const OfferCarousel = () =>
             <Swiper
                 modules={[Pagination]}
                 initialSlide={0}
-                slidesPerView={3}
-                spaceBetween={30}
+                slidesPerView={'auto'}
+                spaceBetween={10}
                 pagination={{ clickable: true }}>
                 <div className={slides.carousel}>
                     {CarouselData?.map((data)=>

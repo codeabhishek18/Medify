@@ -5,7 +5,8 @@ import styles from './News.module.css'
 const News = () =>
 {
     return(
-        <div className={styles.news}>
+       <div className={styles.newscontainer}>
+         <div className={styles.news}>
             <p>Blog & News</p>
             <h1>Read Our Latest News</h1>
             <div className={styles.newscards}>
@@ -15,6 +16,7 @@ const News = () =>
                 ))}
             </div>
         </div>
+       </div>
     )
 }
     

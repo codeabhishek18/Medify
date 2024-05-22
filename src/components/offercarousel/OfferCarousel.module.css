@@ -6,10 +6,12 @@
 
 .carousel
 {
+    display: flex;
     background-color: #ffffff;
     padding: 40px 80px;
     margin-top: 200px;
     padding-right: 50px;
+    padding-bottom: 50px;
 }
 
 .slide
@@ -17,4 +19,36 @@
     width: 400px;
     height: 200px;
     border-radius: 8px;
+}
+
+@media screen and (max-width:1414px)
+{
+    .container
+    {
+        margin-top: 300px;
+    }
+}
+
+@media screen and (max-width:840px)
+{
+    .container
+    {
+        margin-top: 500px;
+    }
+}
+
+@media screen and (max-width:680px)
+{
+    .container
+    {
+        margin-top: 700px;
+    }
+}
+
+@media screen and (max-width:553px)
+{
+    .container
+    {
+        margin-top: 1100px;
+    }
 }

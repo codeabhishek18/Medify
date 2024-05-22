@@ -9,6 +9,7 @@
 
 .dropbutton
 {
+    background-color: var(--gradient-primary);
     display: none;
 }
 

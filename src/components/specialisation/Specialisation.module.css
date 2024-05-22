@@ -21,6 +21,7 @@
 
 .splheader
 {
+    text-align: center;
     display: flex;
     justify-content: center;
     color: #1B3C74;
@@ -78,3 +79,4 @@
     font-size: 16px;
     cursor: pointer;
 }
+
