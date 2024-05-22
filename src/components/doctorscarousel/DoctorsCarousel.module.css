@@ -12,3 +12,9 @@ h1
     font-weight: 600;
     text-align: center;
 }
+
+.wrapper
+{
+    display: flex;
+    height: 440px;
+}

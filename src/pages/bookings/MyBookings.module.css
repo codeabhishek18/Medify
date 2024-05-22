@@ -6,6 +6,7 @@
 .wrapper
 {
     display: flex;
+    justify-content: space-between;
     column-gap: 30px;
     padding: 9vw;
 }
@@ -15,4 +16,13 @@
     display: flex;
     flex-direction: column;
     row-gap: 30px;
+}
+
+@media screen and (max-width:1180pc) 
+{
+    .wrapper
+    {
+        flex-direction: column;
+        row-gap: 30px;
+    }    
 }

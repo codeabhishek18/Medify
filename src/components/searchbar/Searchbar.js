@@ -48,7 +48,8 @@ const Searchbar = ({setLocation, type, setSearchHospital}) =>
         }
         catch(error)
         {
-            enqueueSnackbar('Error occured, try again or refresh', {variant:'error'})
+            // enqueueSnackbar('Try again or refresh', {variant:'error'})
+            console.log(error);
         }
     }
 

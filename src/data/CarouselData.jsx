@@ -14,5 +14,17 @@ export const CarouselData = [
     {
         id: 3,
         image: slide3
+    },
+    {
+        id: 4,
+        image: slide1
+    },
+    {
+        id: 5,
+        image: slide2
+    },
+    {
+        id: 6,
+        image: slide3
     }
 ]

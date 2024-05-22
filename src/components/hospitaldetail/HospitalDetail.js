@@ -59,7 +59,7 @@ const HospitalDetail = ({data, index, setCurrent, type}) =>
             <img src={medcentre} alt="hospital"/>
             
             <div className={hospitaldetail.wrapper}>
-            <   div className={hospitaldetail.content}>
+                <div className={hospitaldetail.content}>
                     <h4>{type === 'bookings' ? data.name : data["Hospital Name"]}</h4>
                     <h6>{type === 'bookings' ? data.location : `${data.City}, ${data.State}`}</h6>
                     <p>Smilessence Center for Advanced Dentistry + 1</p>

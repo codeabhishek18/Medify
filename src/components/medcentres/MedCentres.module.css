@@ -4,6 +4,7 @@
     padding: 8vw;   
     min-height: 10vh;
     display: flex;
+    column-gap: 20px;
     justify-content: space-between;
 }
 
@@ -25,6 +26,19 @@
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+}
+
+@media screen and (max-width:1180px) 
+{
+    .medcontainer
+    {
+        flex-direction: column;
+    }
+
+    .wrapper
+    {
+        width: 100%;
+    }
 }
 
 

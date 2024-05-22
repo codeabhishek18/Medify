@@ -9,7 +9,6 @@
 .category
 {
     display: flex;
-    flex-wrap: wrap;
     row-gap: 20px;
     column-gap: 15px;
 }
@@ -32,10 +31,9 @@
     row-gap: 10px;
 }
 
-.active
+.current
 {
     border: 1px solid var(--primary-color);
-    background-color: var(--gradient-primary);
 }
 
 .header

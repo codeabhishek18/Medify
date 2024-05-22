@@ -1,0 +1,8 @@
+.hospdiv
+{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 30px;
+}
