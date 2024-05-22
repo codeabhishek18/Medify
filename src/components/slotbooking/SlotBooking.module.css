@@ -12,3 +12,11 @@
     flex-direction: column;
     row-gap: 20px;
 }
+
+@media screen and (max-width:1180px)
+{
+    .slotContent
+    {
+        width: 70vw;
+    }
+}

@@ -1,0 +1,28 @@
+.container
+{
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-color: white;
+    position: fixed;
+}
+
+@media screen and (min-width:840px)
+{
+    .container
+    {
+        width: 40vw;
+    }
+}
+
+@media screen and (min-width:1180px)
+{
+    .container
+    {
+       display: none;
+    }
+}
+

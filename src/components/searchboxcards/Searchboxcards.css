@@ -9,6 +9,7 @@
 .category
 {
     display: flex;
+    flex-wrap: wrap;
     row-gap: 20px;
     column-gap: 15px;
 }

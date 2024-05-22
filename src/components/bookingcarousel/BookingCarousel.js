@@ -18,8 +18,8 @@ const BookingCarousel = ({dates, bookingIndex}) =>
             <Swiper
                 modules={{Navigation}}
                 initialSlide={0}
-                slidesPerView={3}
-                spaceBetween={30}>
+                slidesPerView={'auto'}
+                spaceBetween={0}>
                 <LeftNavigation />
                 <RightNavigation />
                 <div className={bookingcarousel.swiperdiv}>

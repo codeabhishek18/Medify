@@ -70,11 +70,6 @@ input
     left: 20px;
 }
 
-.searchbar>input:first-child, .searchbar>button
-{
-    width: 30%;
-}
-
 .searchbar>button, .bookbar>button
 {
     height: 50px;
@@ -102,7 +97,66 @@ input
     font-size: 40px;
 }
 
-@media screen and (max-width:620px) 
+
+@media screen and (max-width:1180px) 
+{
+
+    .bookbar
+    {
+        transform: translateX(5%);
+    }
+
+    .bookbar>input
+    {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width:980px) 
+{ 
+    .searchbar
+    {
+        top:50px;
+        width: 60%;
+        height: 120px;
+        flex-wrap: wrap;
+        column-gap: 100px;
+        justify-content: center;
+        align-items: flex-start;
+        padding:20px;
+        padding-right: 30px;
+        row-gap: 10px;
+    }
+
+    .searchbar_input>select
+    {
+        width: 15rem;
+    }
+
+    .searchbar>button
+    {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width:910px) 
+{
+    .searchbar
+    {
+       padding: 30px;
+       flex-wrap: nowrap;
+       flex-direction: column; 
+    }
+
+    .searchbar>button, .searchbar_input>select
+    {
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width:910px) 
 {
     .bookbar 
     {
@@ -129,36 +183,12 @@ input
     {
         height: 40px;
         padding: 0;
-        width: 90px;
+        width: 40%;
         column-gap: 5px;
     }
 
     .searchwrapper
     {
         height: 140px;
-    }
-
-    .searchbar
-    {
-        top:60px;
-        width: 60%;
-        height: 120px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        padding-left: 30px;
-        row-gap: 10px;
-    }
-
-    .searchbar_input>select
-    {
-        width: 250px;
-    }
-
-    .searchbar>button
-    {
-        padding-top: 5px;
-        padding-bottom: 5px;
-        width: 250px;
     }
 }

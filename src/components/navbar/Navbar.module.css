@@ -6,3 +6,28 @@
     align-items: center;
     padding: 5vh 10vw;
 }
+
+.dropbutton
+{
+    display: none;
+}
+
+.collapse
+{
+    display: block;
+}
+
+@media screen and (max-width:1180px)
+{
+    .dropbutton
+    {
+        display: block;
+        border:0;
+        cursor: pointer;
+    }
+
+    .collapse
+    {
+        display: none;
+    }
+}

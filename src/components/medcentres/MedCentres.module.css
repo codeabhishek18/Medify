@@ -1,7 +1,8 @@
 .medcontainer
 {
     background: linear-gradient(to top, var(--gradient-primary) 100%, var(--gradient-secondary) 47%);
-    padding: 8vw;   
+    padding: 8vw; 
+    padding-top: 90px;  
     min-height: 10vh;
     display: flex;
     column-gap: 20px;
@@ -33,14 +34,15 @@
     .medcontainer
     {
         flex-direction: column;
+        padding-top: 90px;
     }
 }
 
-@media screen and (max-width:620px) 
+@media screen and (max-width:980px) 
 {
     .medcontainer
     {
-        padding-top: 120px;
+        padding-top: 150px;
     }
 }
 

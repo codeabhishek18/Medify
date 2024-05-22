@@ -2,14 +2,15 @@ import { Navitems } from '../../data/Navitems.jsx';
 import styles from './Routes.module.css';
 import { Link } from "react-router-dom";
 
-const Routes = () =>
+const Routes = ({setCollapse, collapse}) =>
 {
     return(
-        <div className={`${styles.collapse} ${styles.routes}`}>
+        <div className={`${styles.collapseroutes} ${styles.routes}`}>
+            {collapse && <button className={styles.navclose} onClick={()=> setCollapse(false)}>Close</button>}
             <ul>
                 {Navitems?.map((data) =>
                 (
-                    <li key={data.id} className={styles.collapse}>
+                    <li key={data.id} className={styles.collapse} onClick={()=> setCollapse(false)}> 
                         <Link to={data.to} 
                             style={{textDecoration:'none', color:'var(--secondary-color)'}}>
                             {data.route}
@@ -17,7 +18,7 @@ const Routes = () =>
                     </li>
                 ))}
             </ul>
-            <span className={styles.bookings}>
+            <span className={styles.bookings} onClick={()=> setCollapse(false)}>
                 <Link to='/mybookings' 
                     style={{textDecoration:'none', color:'white'}}>
                     My Bookings
