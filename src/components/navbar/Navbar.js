@@ -17,7 +17,7 @@ const Navbar = () =>
                 <Hamburger/>
             </button>
             <div className={styles.collapse}>
-                <Routes/>
+                <Routes type="navbar"/>
             </div>
         </div>
     )

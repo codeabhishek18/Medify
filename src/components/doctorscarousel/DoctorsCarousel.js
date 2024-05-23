@@ -16,7 +16,7 @@ const DoctorsCarousel = () =>
                 modules={[Pagination]}
                 initialSlide={0}
                 spaceBetween={30}
-                slidesPerView={'auto'}
+                slidesPerView={4}
                 pagination={{ clickable: true }}>
                 <div className={docstyles.swiperdiv}>
                     {DoctorsData?.map((data)=>

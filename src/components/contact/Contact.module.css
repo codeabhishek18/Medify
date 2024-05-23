@@ -121,6 +121,11 @@
     display: flex;
 }
 
+.smsinner
+{
+    width: 200px;
+}
+
 .smsinner>p
 {
     width: 30px;
@@ -165,8 +170,8 @@
     width: 80px;
     border: 0;
     border-radius: 8px;
+    margin-top: 20px;
     color: white;
-    margin-left: 20px;
 }
 
 .app

@@ -2,8 +2,16 @@ import { Navitems } from '../../data/Navitems.jsx';
 import styles from './Routes.module.css';
 import { Link } from "react-router-dom";
 
-const Routes = ({setCollapse, collapse}) =>
+const Routes = ({type, setCollapse, collapse}) =>
 {
+
+    const handleClick = () =>
+    {
+        if(type==="navbar")
+            return;
+        setCollapse(false)
+    }
+
     return(
         <div className={`${styles.collapseroutes} ${styles.routes}`}>
 
@@ -13,14 +21,14 @@ const Routes = ({setCollapse, collapse}) =>
                     onClick={()=> setCollapse(false)}>
                     Close
                 </button>}
-                
+
             <ul>
                 {Navitems?.map((data) =>
                 (
                     <li 
                         key={data.id} 
                         className={styles.collapse} 
-                        onClick={()=> setCollapse(false)}> 
+                        onClick={handleClick}> 
                         <Link 
                             to={data.to} 
                             style={{textDecoration:'none', color:'var(--secondary-color)'}}>
@@ -32,7 +40,7 @@ const Routes = ({setCollapse, collapse}) =>
 
             <span 
                 className={styles.bookings} 
-                onClick={()=> setCollapse(false)}>
+                onClick={handleClick}>
                 <Link to='/mybookings' 
                     style={{textDecoration:'none', color:'white'}}>
                     My Bookings
