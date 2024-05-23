@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+Medify is a React-based web application that allows users to find medical centers in a specific state and city across the USA and book appointments.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Indexes
+1. Landing Page
+2. Find Doctors
+3. My Bookings
+4. Others
+5. Custom built 
 
-## Available Scripts
+1. Landing Page includes
 
-In the project directory, you can run:
+* Hero section with title and hero image.
+* Available services
+* Cuurent offers
+* Listed specialised doctors
+* FAQ 
+* News feed
+* Medicine stats
+* Contact us section
 
-### `npm start`
+2. Find Doctors Page includes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Dropdowns to search hospitals based on state and cities in USA
+* Result section that lists down hospitals in selected area with count.
+* Every available hospital in selected state and city accepts online booking with mentioned date and times
+* User can select convinient and available date and time and complete booking.
+* Dates and slots are dynamivally generated for upcoming 7 dates
+* Dental advertisement is inline with available hospital cards.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. My Bookings includes
 
-### `npm test`
+* List of hospital that are booked by user.
+* Each card again describes hospital name, location, date and time of slot.
+* Dental advertisement is inline with available booked hospital cards.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Others
 
-### `npm run build`
+* Swiper JS library is used to implement carousel.
+* Notistacks to improve user experience.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Custom built 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Navbar is responsive, collapsable and is built from scratch.
+* Home page includes FAQ section which is a custom accordian built from scratch.
+* Number of components are customised to reuse them, like hospital cards for search and my booking.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This application is responsive and runs seamlessly on any device or screen size
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   
