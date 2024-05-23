@@ -7,7 +7,7 @@ const FooterList = ({footerdata}) =>
         <div className={footerlist.right}>
             {footerdata.map((data, index)=>
             (
-                <span key={index}>
+                <span key={index} className={footerlist.lists}>
                     <img src={arrow} alt="arrow"/> 
                     {data.name}
                 </span>

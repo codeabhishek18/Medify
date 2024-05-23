@@ -46,4 +46,18 @@
     }
 }
 
+@media screen and (max-width:980px) 
+{
+    .medcontainer
+    {
+        justify-content: center;
+    }
+
+    .adwrapper
+    {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 

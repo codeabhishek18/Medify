@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { CarouselData } from '../../data/CarouselData';
@@ -11,11 +11,10 @@ const OfferCarousel = () =>
     return(
         <div className={slides.container}>
             <Swiper
-                modules={[Pagination]}
-                initialSlide={0}
-                slidesPerView={'auto'}
-                spaceBetween={10}
-                pagination={{ clickable: true }}>
+                modules={[Navigation, Pagination]}
+                slidesPerView={1}
+                pagination={{ clickable: true }}
+                centeredSlides={true}>
                 <div className={slides.carousel}>
                     {CarouselData?.map((data)=>
                     (

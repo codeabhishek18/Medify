@@ -50,9 +50,9 @@ const MedCentres = ({location}) =>
                 ))}
                 </div>
             </div>
-            {/* <div className={styles.adwrapper}>
+            <div className={styles.adwrapper}>
                 <Ad/>
-            </div> */}
+            </div>
         </div>
     )
 }

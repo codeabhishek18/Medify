@@ -31,6 +31,7 @@
 
 .carecontent>h1
 {
+    text-align: left;
     margin-top: 5px;
     font-size: 48px;
     color: var(--secondary-color);
@@ -68,3 +69,24 @@
     column-gap: 10px;
 }
 
+@media screen and (max-width:980px) 
+{
+    .patientCare>img
+    {
+        width: 80vw;
+        height: fit-content;
+    }
+
+    .patientCare
+    {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .carecontent>h1
+    {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+
+}

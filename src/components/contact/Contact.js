@@ -25,8 +25,10 @@ const Contact = () =>
                 </div>
                 <p>Get the link to download the app</p>
                 <div className={contact.smswrapper}>
-                    <p>+91</p>
-                    <input placeholder='Enter phone number'/>
+                    <div className={contact.smsinner}>
+                        <p>+91</p>
+                        <input placeholder='Enter phone number'/>
+                    </div>
                     <button>Send SMS</button>
                 </div>
                 <div className={contact.app}>

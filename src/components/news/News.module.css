@@ -2,7 +2,6 @@
 {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .news
@@ -32,5 +31,21 @@
 .newscards
 {
     display: flex;
+    flex-wrap: nowrap;
     column-gap: 40px;
+}
+
+@media screen and (max-width:1180px)
+{
+    .newscontainer
+    {
+        flex-direction: column;
+    }
+
+    .newscards
+    {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
 }

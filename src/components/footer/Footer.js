@@ -31,9 +31,11 @@ const Footer = () =>
                     
                 </div>
 
-                <FooterList footerdata={fistColumndata}/>
-                <FooterList footerdata={secondColumndata}/>
-                <FooterList footerdata={thirdColumndata}/>
+                <div className={styles.footergroup}>
+                    <FooterList footerdata={fistColumndata}/>
+                    <FooterList footerdata={secondColumndata}/>
+                    <FooterList footerdata={thirdColumndata}/>
+                </div>
             </div>
 
             <div className={styles.copyright}>

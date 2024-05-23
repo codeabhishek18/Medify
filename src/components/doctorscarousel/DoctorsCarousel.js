@@ -12,7 +12,7 @@ const DoctorsCarousel = () =>
         <div className={docstyles.container}>
             <h1>Our Medical Specialist</h1>
             <div className={docstyles.wrapper}>
-            <Swiper
+            <Swiper className={docstyles.swiper}
                 modules={[Pagination]}
                 initialSlide={0}
                 spaceBetween={30}

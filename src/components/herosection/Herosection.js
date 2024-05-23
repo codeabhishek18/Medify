@@ -1,6 +1,7 @@
 import styles from './Herosection.module.css'
 import heroimage from '../../assets/heroimage.png' 
 import SearchBox from '../searchbox/SearchBox';
+import { Link } from 'react-router-dom';
 
 const Herosection = () =>
 {
@@ -13,7 +14,9 @@ const Herosection = () =>
                         <span>Medical <span style={{color:'var(--primary-color)'}}>Centers</span></span>
                     </div>
                     <p>Connect instantly with a 24x7 specialist or choose to video visit a particular doctor.</p>
-                    <button>Find Centers</button>
+                    <button>
+                        Find Centers
+                    </button>
                 </div>
                 <div className={styles.heroimage}>
                     <img src={heroimage} alt="heroimage"/>

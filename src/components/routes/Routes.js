@@ -6,24 +6,39 @@ const Routes = ({setCollapse, collapse}) =>
 {
     return(
         <div className={`${styles.collapseroutes} ${styles.routes}`}>
-            {collapse && <button className={styles.navclose} onClick={()=> setCollapse(false)}>Close</button>}
+
+            {collapse && 
+                <button 
+                    className={styles.navclose} 
+                    onClick={()=> setCollapse(false)}>
+                    Close
+                </button>}
+                
             <ul>
                 {Navitems?.map((data) =>
                 (
-                    <li key={data.id} className={styles.collapse} onClick={()=> setCollapse(false)}> 
-                        <Link to={data.to} 
+                    <li 
+                        key={data.id} 
+                        className={styles.collapse} 
+                        onClick={()=> setCollapse(false)}> 
+                        <Link 
+                            to={data.to} 
                             style={{textDecoration:'none', color:'var(--secondary-color)'}}>
                             {data.route}
                         </Link>
                     </li>
                 ))}
             </ul>
-            <span className={styles.bookings} onClick={()=> setCollapse(false)}>
+
+            <span 
+                className={styles.bookings} 
+                onClick={()=> setCollapse(false)}>
                 <Link to='/mybookings' 
                     style={{textDecoration:'none', color:'white'}}>
                     My Bookings
                 </Link>
             </span>
+
         </div>
     )
 }

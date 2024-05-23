@@ -1,6 +1,7 @@
 .container
 {
     background: linear-gradient(to top, var(--gradient-primary) 100%, var(--gradient-secondary) 47%);
+    padding-bottom: 30px;
 }
 
 .wrapper

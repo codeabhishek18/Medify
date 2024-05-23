@@ -44,4 +44,10 @@
         align-items: center;
         margin-bottom: 40px;
     }
+
+    .faqwrapper>img
+    {
+        width: 80vw;
+        height: fit-content;
+    }
 }
