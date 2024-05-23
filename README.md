@@ -1,6 +1,6 @@
 Medify is a React-based web application that allows users to find medical centers in a specific state and city across the USA and book appointments.
 
-Main routes
+Indexes
 1. Landing Page
 2. Find Doctors
 3. My Bookings
