@@ -1,6 +1,5 @@
 import contact from './Contact.module.css'
-import phone from '../../assets/mobileapp1.png'
-import app from '../../assets/mobileapp2.png'
+import phone from '../../assets/phone.png'
 import applestore from '../../assets/applestore.png'
 import googleplay from '../../assets/googleplay.png'
 import arrow from '../../assets/arrow.png'
@@ -10,13 +9,8 @@ const Contact = () =>
 
     return(
         <div className={contact.container}>
-            <div className={contact.phone1}>
+            <div className={contact.phone}>
                 <img src={phone} alt="phone"/>
-                <img src={app} alt="phone"/>
-            </div>
-            <div className={contact.phone2}>
-                <img src={phone} alt="phone"/>
-                <img src={app} alt="phone"/>
             </div>
             <div className={contact.content}>
                 <div className={contact.contentheader}>

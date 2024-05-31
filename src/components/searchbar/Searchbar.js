@@ -4,14 +4,17 @@ import search from '../../assets/search.png'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { enqueueSnackbar } from 'notistack'
+import { useLocation } from '../../contextapi/locationContext'
+import { Navigate } from 'react-router-dom'
 
-const Searchbar = ({setLocation, type, setSearchHospital}) =>
+const Searchbar = ({page, type, setSearchHospital}) =>
 {
     const [address, setAddress] = useState({state: '', city: ''});
-    const [statesList, setStateslist] = useState([]);
     const [citiesList, setCitiesList] = useState([]);
-    const [hospitalName, setHospitalName] = useState('');
-
+    const [hospitalName, setHospitalName] = useState('');   
+    const { updateLocation, statesList } = useLocation();
+    const [navigate, setNavigate] = useState(false);
+    
     const handleChange = (e) =>
     {
         setAddress({...address, [e.target.name] : e.target.value})
@@ -21,21 +24,8 @@ const Searchbar = ({setLocation, type, setSearchHospital}) =>
     const handleSubmit = (e) =>
     {
         e.preventDefault();
-        setLocation(address);
-    }
-
-    const getStates = async () =>
-    {
-        try
-        {
-            const url = 'https://meddata-backend.onrender.com/states';
-            const response = await axios.get(url);
-            setStateslist(response.data);   
-        } 
-        catch(error)
-        {
-            enqueueSnackbar('Error occured, try again or refresh', {variant:'error'})
-        }   
+        updateLocation(address);
+        setNavigate(true);
     }
 
     const getCities = async () =>
@@ -48,21 +38,16 @@ const Searchbar = ({setLocation, type, setSearchHospital}) =>
         }
         catch(error)
         {
-            // enqueueSnackbar('Try again or refresh', {variant:'error'})
             console.log(error);
         }
     }
-
-    useEffect(() =>
-    {
-        getStates();
-    },[])
 
     useEffect(()=>
     {
         getCities();
         setCitiesList([]);
         setAddress({state:address.state, city:''});
+        setNavigate(false);
     },[address.state])
 
     const handleSearch = (e) =>
@@ -72,7 +57,7 @@ const Searchbar = ({setLocation, type, setSearchHospital}) =>
     }   
 
     return(
-        <div className={styles.searchwrapper}>
+        <div className={page === 'home' ? `${styles.searchwrapper} ${styles.home}` : styles.searchwrapper}>
             {type === "bookings" && <h1 className={styles.bookingheader}>My Bookings</h1>}
             {type !== "bookings" ?
             <form className={styles.searchbar} onSubmit={handleSubmit}>
@@ -109,9 +94,9 @@ const Searchbar = ({setLocation, type, setSearchHospital}) =>
 
                 <button type='submit'>
                     <img src={search} alt="search"/>
-                    Search
+                        Search
                 </button>
-
+                {page==='home' && navigate && <Navigate to={'/doctors'}/>}
             </form> 
             
             :

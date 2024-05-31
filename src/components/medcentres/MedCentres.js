@@ -5,11 +5,14 @@ import axios from "axios"
 import whitetick from '../../assets/whitetick.png'
 import { enqueueSnackbar } from 'notistack'
 import Ad from '../ad/Ad'
+import { useLocation } from '../../contextapi/locationContext'
 
-const MedCentres = ({location}) =>
+const MedCentres = () =>
 {
     const [hospitalData, setHospitalData] = useState([]);
     const [current, setCurrent] = useState(-1);
+
+    const { location } = useLocation();
     
     const getHospitalData = async () =>
     {

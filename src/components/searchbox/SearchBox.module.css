@@ -1,6 +1,9 @@
 .searchbox
 {
     width: 75vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
     padding: 20px;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -8,99 +11,4 @@
     bottom: -30%;
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.form
-{
-    display: flex;
-    justify-content: center;
-    column-gap: 40px;
-    margin-bottom: 40px;
-}
-
-.form input
-{
-    height: 50px;
-    width: 200px;
-    background-color: #FAFBFE;
-    border: 1px solid #F0F0F0;
-    border-radius: 8px;
-    font-size: 14px;
-    padding-left: 40px;
-    padding-right: 20px;
-}
-
-.form button
-{
-    height: 50px;
-    background-color: var(--primary-color);
-    color: white;
-    display: flex;
-    justify-content: left;
-    padding-left: 10px;
-    column-gap: 5px;
-    align-items: center;
-    border: 0;
-    border-radius: 8px;
-    width: 125px;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.innerdiv
-{
-    position: relative;
-}
-
-.form .search
-{
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-@media screen and (max-width:480px) 
-{
-    .form
-    {
-        flex-direction: column;
-        align-items: center;
-        row-gap: 10px;
-    }    
-
-    .innerdiv, .form>.seacrch
-    {
-        width: 80vw;
-    }
-
-    .innerdiv
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .form .search
-    {
-        left: 45px;
-    }
-
-    .innerdiv>input
-    {
-        width: 100%;
-    }
-
-    .form input
-    {
-        height: 30px;
-    }
-
-    .form>button
-    {
-        height: 40px;
-        width: 87%;
-    }
 }

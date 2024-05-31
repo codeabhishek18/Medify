@@ -8,23 +8,28 @@ import Footer from './components/footer/Footer';
 import MyBookings from './pages/bookings/MyBookings';
 import { SnackbarProvider } from 'notistack'
 import Contact from './components/contact/Contact';
+import { LocationProvider } from './contextapi/locationContext';
 
 function Medify()
 {
   return(
     <div>
-      <SnackbarProvider anchorOrigin={{ horizontal: 'center', vertical: 'top' }}>
-        <Headline/>
-        <Navbar/>
-        <Outlet/>
-        <Contact/>
-        <Footer/>
-      </SnackbarProvider>
+      <LocationProvider>
+        <SnackbarProvider anchorOrigin={{ horizontal: 'center', vertical: 'top' }}>
+          <Headline/>
+          <Navbar/>
+          <Outlet/>
+          <Contact/>
+          <Footer/>
+          </SnackbarProvider>
+      </LocationProvider>
     </div>
   )
 }
 
-function App() {
+function App() 
+{
+  
   return (
     <div className="App">
       <Router>
