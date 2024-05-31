@@ -12,7 +12,7 @@ const OfferCarousel = () =>
         <div className={slides.container}>
             <Swiper
                 modules={[Navigation, Pagination]}
-                initialSlide={0}
+                initialSlide={1}
                 slidesPerView={3}
                 pagination={{ clickable: true }}
                 centeredSlides={true}>

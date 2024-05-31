@@ -34,7 +34,6 @@
     border-radius: 15px;
     padding: 25px;
     column-gap: 20px;
-    display: flex;
     position: absolute;
     bottom: -50px;
 }
@@ -65,15 +64,15 @@
     font-size: 14px;
 }
 
-.searchbar_input>select, .searchbar_input>input
+.searchbar_input>select
 {
-    width: 100%;
+    width: 80%;
     height: 50px;
     background-color: #F0F0F0;
     border: 0;
 }
 
-.searchbar_input, .searchbar_input
+.searchbar_input
 {
     padding-left: 50px;
     width: 100%;
@@ -81,12 +80,7 @@
     border-radius: 8px;
     background-color: #F0F0F0;
     font-size: 14px;
-}
-
-.searchbar_input
-{
     position: relative;
-    width: 100%;
 }
 
 .searchbar_input>img
@@ -139,15 +133,6 @@
     }
 }
 
-@media screen and (max-width:980px) 
-{ 
-    .home>.searchbar
-    {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-
 @media screen and (max-width:910px) 
 {
     .bookbar 
@@ -159,6 +144,13 @@
         column-gap: 10px;
     }
 
+    .home>.searchbar
+    {
+        margin-left: 0;
+        width: 95%;
+
+    }
+
     .bookbar>input
     {
         padding: 0;
@@ -167,7 +159,7 @@
 
     .bookingheader
     {
-        top:0;
+        top:-20px;
         left: 20px;
     }
 
@@ -178,4 +170,26 @@
         width: 40%;
         column-gap: 5px;
     }
+}
+
+@media screen and (max-width:575px) 
+{
+    .searchbar
+    {
+        top:30px;
+        flex-direction: column;
+        row-gap: 10px;
+        height: 170px;
+    }
+
+    .searchbar_input
+    {
+        width: 80%;
+    } 
+
+    .searchbar>button
+    {
+        width: 40%;
+    }
+
 }

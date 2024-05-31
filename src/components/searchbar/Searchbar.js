@@ -62,7 +62,7 @@ const Searchbar = ({page, type, setSearchHospital}) =>
             {type !== "bookings" ?
             <form className={styles.searchbar} onSubmit={handleSubmit}>
 
-                <div className={styles.searchbar_input} style={{width:'30%'}}>
+                <div className={styles.searchbar_input}>
                     <select name="state" onChange={handleChange}>
                         <option value="" >State</option>
                         {statesList?.map((state) =>
@@ -77,7 +77,7 @@ const Searchbar = ({page, type, setSearchHospital}) =>
                     />
                 </div>
 
-                <div className={styles.searchbar_input} style={{width:'40%'}}>
+                <div className={styles.searchbar_input}>
                     <select name="city" onChange={handleChange}>
                         <option value="" >City</option>
                         {citiesList?.map((city) =>
