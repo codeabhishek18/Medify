@@ -4,7 +4,7 @@ import slotbookings from './SlotBooking.module.css'
 import Slots from '../slots/Slots';
 import { useState } from 'react';
 
-const SlotBooking = ({data, bookingIndex}) =>
+const SlotBooking = ({data,current, bookingIndex}) =>
 {
     const [selectedSlot, setSelectedSlot]  = useState({type: '', index: -1});
 
@@ -15,6 +15,10 @@ const SlotBooking = ({data, bookingIndex}) =>
 
     return(
        <div className={slotbookings.slotbooking}>
+            {current === bookingIndex && 
+            <div className={slotbookings.activehospital}>
+                <span className={slotbookings.activespan}></span>
+            </div>}
             <BookingCarousel data={data} dates={dates} bookingIndex={bookingIndex}/>
             <div className={slotbookings.slotContent}>
                 <Slots slotdata={MorningSlot} handleClick={handleClick} type="Morning" selectedSlot={selectedSlot} setSelectedSlot={setSelectedSlot}/>

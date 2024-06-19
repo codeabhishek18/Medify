@@ -3,9 +3,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 60px;
     padding-left: 9vw;
     padding-right: 9vw;
+    padding-bottom: 60px;
 }
 
 .faq>p

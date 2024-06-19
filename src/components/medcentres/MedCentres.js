@@ -10,7 +10,7 @@ import { useLocation } from '../../contextapi/locationContext'
 const MedCentres = () =>
 {
     const [hospitalData, setHospitalData] = useState([]);
-    const [current, setCurrent] = useState(-1);
+    const [current, setCurrent] = useState(null);
 
     const { location } = useLocation();
     

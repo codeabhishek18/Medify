@@ -3,7 +3,6 @@ import locationTag from '../../assets/location.png'
 import search from '../../assets/search.png'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { enqueueSnackbar } from 'notistack'
 import { useLocation } from '../../contextapi/locationContext'
 import { Navigate } from 'react-router-dom'
 
@@ -12,7 +11,7 @@ const Searchbar = ({page, type, setSearchHospital}) =>
     const [address, setAddress] = useState({state: '', city: ''});
     const [citiesList, setCitiesList] = useState([]);
     const [hospitalName, setHospitalName] = useState('');   
-    const { updateLocation, statesList } = useLocation();
+    const {updateLocation, statesList} = useLocation();
     const [navigate, setNavigate] = useState(false);
     
     const handleChange = (e) =>
@@ -62,7 +61,7 @@ const Searchbar = ({page, type, setSearchHospital}) =>
             {type !== "bookings" ?
             <form className={styles.searchbar} onSubmit={handleSubmit}>
 
-                <div className={styles.searchbar_input}>
+                <div className={`${styles.searchbar_input} ${styles.firstinput}`}>
                     <select name="state" onChange={handleChange}>
                         <option value="" >State</option>
                         {statesList?.map((state) =>
@@ -77,7 +76,7 @@ const Searchbar = ({page, type, setSearchHospital}) =>
                     />
                 </div>
 
-                <div className={styles.searchbar_input}>
+                <div className={`${styles.searchbar_input} ${styles.secondinput}`}>
                     <select name="city" onChange={handleChange}>
                         <option value="" >City</option>
                         {citiesList?.map((city) =>

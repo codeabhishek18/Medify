@@ -1,7 +1,7 @@
 .slotbooking
 {
     background-color: white;
-    width: 45vw;
+    width: 100%;
     padding: 30px;
 }
 
@@ -13,10 +13,28 @@
     row-gap: 20px;
 }
 
+.activehospital
+{
+    width: 100%;
+    height: 0.5px;
+    background-color: rgb(221, 218, 218);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.activespan
+{
+    width: 40px;
+    padding: 2px;
+    border-radius: 8px;
+    background-color: #01A400;
+}
+
 @media screen and (max-width:1180px)
 {
     .slotContent
     {
-        width: 70vw;
+        width: 100%;
     }
 }

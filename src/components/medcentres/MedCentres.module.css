@@ -1,12 +1,16 @@
 .medcontainer
 {
-    background: linear-gradient(to top, var(--gradient-primary) 100%, var(--gradient-secondary) 47%);
-    padding: 8vw; 
     padding-top: 90px;  
     min-height: 10vh;
     display: flex;
     column-gap: 20px;
     justify-content: space-between;
+    width: 80%;
+}
+
+.wrapper
+{
+    width: 70%;
 }
 
 .medheader>p:last-child
@@ -24,9 +28,16 @@
 
 .medcentres
 {
+    width: 100%;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+}
+
+.adwrapper
+{
+    margin-top: 95px;
+    width: 30%;
 }
 
 @media screen and (max-width:1180px) 
@@ -36,28 +47,33 @@
         flex-direction: column;
         padding-top: 90px;
     }
-}
 
-@media screen and (max-width:980px) 
-{
-    .medcontainer
+    .wrapper
     {
-        padding-top: 150px;
+        width: 100%;
     }
-}
 
-@media screen and (max-width:980px) 
-{
-    .medcontainer
+    .medheader
     {
-        justify-content: center;
+        width: 100%;
+    }
+
+    .medcentres
+    {
+        width: 100%;
     }
 
     .adwrapper
     {
-        display: flex;
-        justify-content: center;
+        width: 100%;
+        margin-top: 30px;
     }
 }
 
-
+@media screen and (max-width:575px) 
+{
+    .medcontainer
+    {
+        margin-top: 80px;
+    }
+}

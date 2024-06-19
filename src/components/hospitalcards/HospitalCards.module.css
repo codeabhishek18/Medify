@@ -3,13 +3,5 @@
     margin-top: 20px;
     background-color: white;
     border-radius: 8px;
-    width: 45vw;
-}
-
-@media screen and (max-width:1180px) 
-{
-    .main
-    {
-        width: 100%;
-    }
+    width: 100%;
 }

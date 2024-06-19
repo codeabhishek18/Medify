@@ -1,8 +1,7 @@
-.hospdiv
+.finddoc
 {
-    margin-top: 30px;
+    background: linear-gradient(to top, var(--gradient-primary) 100%, var(--gradient-secondary) 47%);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    column-gap: 30px;
 }

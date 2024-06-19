@@ -15,8 +15,9 @@ const bookingId = () =>
     return result;
 }
 
-const HospitalDetail = ({data, index, setCurrent, type}) =>
+const HospitalDetail = ({data, index, current, setCurrent, type}) =>
 {
+    console.log(current)
 
     useEffect(()=>
     {
@@ -71,8 +72,8 @@ const HospitalDetail = ({data, index, setCurrent, type}) =>
                         <p>Consultation fee at clinic</p>
                     </div>}
 
-                    <p className={hospitaldetail.dotted}></p>
-                    <img src={like} alt="like"/>
+                    {current !== index && <p className={hospitaldetail.dotted}></p>}
+                    {current !== index && <img src={like} alt="like"/>}
                 </div>
             
                 {type === 'bookings' ?

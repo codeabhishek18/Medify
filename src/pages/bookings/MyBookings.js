@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import HospitalDetail from "../../components/hospitaldetail/HospitalDetail";
-import mybookings from './MyBookings.module.css'
+import bookingstyles from './MyBookings.module.css'
 import Searchbar from "../../components/searchbar/Searchbar";
 import Ad from "../../components/ad/Ad";
 
@@ -17,19 +17,22 @@ const MyBookings = () =>
     },[])
 
     return(
-        <div className={mybookings.container}>
+        <div className={bookingstyles.container}>
             <Searchbar type="bookings" setSearchHospital={setSearchHospital}/>
-            <div className={mybookings.wrapper}> 
-                {myBookings ? <div>
+            <div className={bookingstyles.wrapper}> 
+                {myBookings ? 
+                <div className={bookingstyles.bookings}>
                     {filteredHospitalData.map((data) =>
                     (
                         <HospitalDetail data={data} type="bookings"/>
                     ))}
                 </div>
                 :
-                <h1>No Bookings</h1>}
+                <h1 className={bookingstyles.bookings}>No Bookings</h1>}
                 {myBookings && !filteredHospitalData.length && <h1>No Hospitals Found</h1>}
-                <Ad/>
+                <div className={bookingstyles.ad}>
+                    <Ad/>
+                </div>
             </div>
         </div>
     )
